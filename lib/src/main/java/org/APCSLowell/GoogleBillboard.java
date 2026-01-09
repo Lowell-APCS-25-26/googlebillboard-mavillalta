@@ -4,12 +4,33 @@
 package org.APCSLowell;
 
 public class GoogleBillboard {
-    public boolean isPrime(long n) {
-        // Copy and paste your answer from CodingBat appropriatley here.
-        return false;
+public boolean isPrime(long num)  
+{   
+   if(num<2){
+    return false;
+  }
+  if(num==2)
+    return true;
+  for(int i=2;i<(int)(Math.sqrt(num)+1);i++){
+    if(num%i==0){
+      return false;
     }
-    public long firstPrimeNumberIn(String n) {
-        // Write your code here.
-        return -1;
+  }
+  return true; 
+
+      
+    }
+    public long firstPrimeNumberIn(String e) {
+        int i=0;
+    while(true){
+  String d=e.substring(i,i+10);
+  Long num =Long.parseLong(d);
+  if(isPrime(num)){
+    return(num);
+  }
+  i++;
+}
+  
+    
     }
 }
